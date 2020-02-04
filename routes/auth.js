@@ -1,15 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
 
 // External Packages
 const bcrypt = require("bcrypt");
-var jwtDecode = require("jwt-decode");
 
 // Local imports
 const { Tenant } = require("../models/tenant");
-const { dbUriFuncAuth } = require("../services/dbConnectionAuth/dbUri");
-const { dbUriFunc } = require("../services/dbConnectionOrg/dbUriOrg");
 
 router.post("/", async (req, res) => {
   // Check if the user is present or not
